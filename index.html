@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Server Status</title>
+    <script>
+        // Redirigir a HTTPS si no está ya en HTTPS
+        if (location.protocol !== 'https:') {
+            location.href = 'https://' + location.host + location.pathname + location.search;
+        }
+    </script>
 </head>
 <body>
     <h1>Server Alive</h1>
